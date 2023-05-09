@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21222a;
+  box-shadow: 0px 4px 4px black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #61dafb;
+  margin-left: 16px;
+  font-size: 22px;
+}
+
+.navbar > h4 {
+  color: #deebf8;
+  margin-right: 16px;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.logo {
+  width: 40px;
+}
