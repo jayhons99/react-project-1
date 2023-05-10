@@ -5,6 +5,8 @@
 
 body {
   margin: 0;
+  padding: 0;
+  background-color: #2b2d35;
 }
 
 .navbar {
@@ -36,4 +38,34 @@ body {
 
 .logo {
   width: 40px;
+}
+
+.main-container {
+  background-image: url("react-icon-large.png");
+  background-repeat: no-repeat no-repeat;
+  background-position: right 75%;
+  color: white;
+  padding: 57px 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-container > ul {
+  font-size: 16px;
+}
+
+.main-container > ul li {
+  margin-bottom: 8px;
+}
+
+.main-container > ul li::marker {
+  color: #61dafb;
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.main-header {
+  margin: 0;
+  letter-spacing: -0.05em;
 }
