@@ -3,20 +3,29 @@
   font-family: "Inter", sans-serif;
 }
 
+#root {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #2b2d35;
+  overflow: hidden;
+  /* background-color: #2b2d35; */
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #21222a;
-  box-shadow: 0px 4px 4px black;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px black;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.navbar.dark {
+  background-color: #21222a;
 }
 
 .left-nav {
@@ -29,26 +38,35 @@ body {
   font-size: 22px;
 }
 
-.navbar > h4 {
+/* .navbar > h4 {
   color: #deebf8;
   margin-right: 16px;
   font-weight: 600;
   font-size: 21px;
-}
+  display: none;
+} */
 
 .logo {
   width: 40px;
 }
 
 .main-container {
-  background-image: url("react-icon-large.png");
+  background-image: url("react-icon-light.png");
   background-repeat: no-repeat no-repeat;
-  background-position: right 75%;
-  color: white;
-  padding: 57px 27px;
+  background-position: right 20%;
+  color: #2b283a;
+  padding-top: 57px;
+  padding-inline: 27px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 90%;
+}
+
+.main-container.dark {
+  background-image: url("react-icon-dark.png");
+  background-color: #282d35;
+  color: white;
 }
 
 .main-container > ul {
@@ -69,3 +87,72 @@ body {
   margin: 0;
   letter-spacing: -0.05em;
 }
+
+.--toggler {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.--toggler p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.--toggler-slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2b283a;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+.navbar.dark .--toggler-slider {
+  border-color: white;
+  background-color: #f5f5f5;
+}
+
+.--toggler-slider-circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateX(0%);
+}
+
+.navbar.dark .--toggler-slider-circle {
+  background-color: black;
+  transform: translateX(100%);
+}
+
+.--toggler-light {
+  color: #2b283a;
+}
+
+.navbar.dark .--toggler-light {
+  color: #918e9b;
+}
+
+.--toggler-dark {
+  color: #d5d4d8;
+}
+
+.navbar.dark .--toggler-dark {
+  color: #ffffff;
+}
+
+.navbar.dark .--toggler-slider {
+  color: #ffffff;
+}
+
+/* @media screen and (min-width: 481px) {
+  .navbar > h4 {
+    display: inline-block;
+  }
+} */

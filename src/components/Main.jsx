@@ -1,6 +1,7 @@
-function Main() {
+/* eslint-disable react/prop-types */
+function Main(props) {
   return (
-    <div className="main-container">
+    <div className={props.darkMode ? "main-container dark" : "main-container"}>
       <h1 className="main-header">Fun facts about React</h1>
       <ul>
         <li>Was first released in 2013</li>
